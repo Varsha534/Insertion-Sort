@@ -1,29 +1,26 @@
-# Selection-Sort-in-c
 
-# Selction Sort
-Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list. The algorithm repeatedly selects the smallest (or largest) element from the unsorted portion of the list and swaps it with the first element of the unsorted portion. This process is repeated for the remaining unsorted portion of the list until the entire list is sorted. One variation of selection sort is called “Bidirectional selection sort” which goes through the list of elements by alternating between the smallest and largest element, this way the algorithm can be faster in some cases.
+# Insertion Sort
+Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
 
-![image](https://user-images.githubusercontent.com/125336949/234410585-3393a447-8ee5-477d-8ff0-beefacf5237f.png)
- 
-# Algorithm 
+![image](https://user-images.githubusercontent.com/125336949/234468073-4acdec40-a3d1-4df6-87fe-284cb1ee6c62.png)
 
-The algorithm maintains two subarrays in a given array.
+Characteristics of Insertion Sort:
 
-- The subarray which already sorted. 
-- The remaining subarray was unsorted.
-- In every iteration of the selection sort, the minimum element (considering ascending order) from the unsorted subarray is picked and moved to the beginning of the sorted subarray. 
+- This algorithm is one of the simplest algorithm with simple implementation
+- Basically, Insertion sort is efficient for small data values
+- Insertion sort is adaptive in nature, i.e. it is appropriate for data sets which are already partially sorted.
 
-- After every iteration sorted subarray size increase by one and the unsorted subarray size decrease by one.
+# Complexity Analysis of Insertion Sort:
 
-- After the N (size of the array) iteration, we will get a sorted array.
+Time Complexity of Insertion Sort
 
-# Complexity Analysis of Selection Sort:
+- The worst case time complexity of Insertion sort is O(N^2)
+- The average case time complexity of Insertion sort is O(N^2)
+- The time complexity of the best case is O(N).
 
-Time Complexity: The time complexity of Selection Sort is O(N2) as there are two nested loops:
+Space Complexity of Insertion Sort
 
-- One loop to select an element of Array one by one = O(N)
-- Another loop to compare that element with every other Array element = O(N)
-- Therefore overall complexity = O(N) * O(N) = O(N*N) = O(N2)
+The auxiliary space complexity of Insertion Sort’s Recursive Approach is O(n) due to the recursion stack.
 
 # Binary Search
 Binary Search is defined as a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(log N). 
@@ -41,17 +38,4 @@ The basic steps to perform Binary Search are:
 - Perform step 2 repeatedly until the target element is found or the search space is exhausted.
 
 ![image](https://user-images.githubusercontent.com/125336949/234405666-cccc850a-42d7-4f81-acda-fb721f6e1704.png)
-
-# Advantages of Binary Search:
-- Binary search is faster than linear search, especially for large arrays. As the size of the array increases, the time it takes to perform a linear search increases linearly, while the time it takes to perform a binary search increases logarithmically.
-- Binary search is more efficient than other searching algorithms that have a similar time complexity, such as interpolation search or exponential search.
-- Binary search is relatively simple to implement and easy to understand, making it a good choice for many applications.
-- Binary search is well-suited for searching large datasets that are stored in external memory, such as on a hard drive or in the cloud.
-- Binary search can be used as a building block for more complex algorithms, such as those used in computer graphics and machine learning.
-
-# Drawbacks of Binary Search:
-- We require the array to be sorted. If the array is not sorted, we must first sort it before performing the search. This adds an additional O(N * logN) time --- - complexity for the sorting step, which makes it irrelevant to use binary search.
-- Binary search requires that the data structure being searched be stored in contiguous memory locations. This can be a problem if the data structure is too large to fit in memory, or if it is stored on external memory such as a hard drive or in the cloud.
-- Binary search requires that the elements of the array be comparable, meaning that they must be able to be ordered. This can be a problem if the elements of the array are not naturally ordered, or if the ordering is not well-defined.
-- Binary search can be less efficient than other algorithms, such as hash tables, for searching very large datasets that do not fit in memory.
 
