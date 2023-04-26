@@ -54,7 +54,6 @@ void InsertionSort(int arr[])
 int binarysearch(int arr[], int num)
 {
     int low=0, up=4, mid;
-
     while(low <= up)
     {
               mid = (low+up)/2;
